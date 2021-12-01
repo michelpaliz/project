@@ -15,6 +15,7 @@ public class Ejercicio16 {
       int opcion;
       char plantarse;
       int o  = 0;
+      int x = 10;
 
       do {
          System.out.println("***************************");
