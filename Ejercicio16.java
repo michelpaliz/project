@@ -15,7 +15,8 @@ public class Ejercicio16 {
       int opcion;
       char plantarse;
       int a = 5;
-      
+      int b = 6;
+
       do {
          System.out.println("***************************");
          System.out.println("*** JUEGO DE DADOS ONCE ***");
