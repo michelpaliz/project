@@ -14,7 +14,8 @@ public class Ejercicio16 {
       int porrasCPU = 0;
       int opcion;
       char plantarse;
-
+      int a = 5;
+      
       do {
          System.out.println("***************************");
          System.out.println("*** JUEGO DE DADOS ONCE ***");
