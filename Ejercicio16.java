@@ -127,4 +127,9 @@ public class Ejercicio16 {
       } while(opcion != 0);
       System.out.println("Hasta pronto!!");
    }
+
+   public static int random(int min, int max) {
+      Random r = new Random();
+      return r.nextInt(max - min + 1) + min;
+  }
 }
