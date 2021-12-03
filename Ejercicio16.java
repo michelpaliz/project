@@ -17,13 +17,7 @@ public class Ejercicio16 {
       final int MAX = 6;
 
       do {
-         System.out.println("***************************");
-         System.out.println("*** JUEGO DE DADOS ONCE ***");
-         System.out.println("***************************");
-         System.out.println("1. Nueva partida ...");
-         System.out.println("0. Salir");
-         System.out.print("\nElige una opción: ");
-         opcion = Integer.parseInt(lector.nextLine());
+         opcion = mostrarMenu();
          if(opcion == 1) {
             porrasCPU = 0;
             porrasPlayer = 0;
@@ -127,8 +121,24 @@ public class Ejercicio16 {
       System.out.println("Hasta pronto!!");
    }
 
+   public static int mostrarMenu(){
+
+      System.out.println("***************************");
+      System.out.println("*** JUEGO DE DADOS ONCE ***");
+      System.out.println("***************************");
+      System.out.println("1. Nueva partida ...");
+      System.out.println("0. Salir");
+      System.out.print("\nElige una opción: ");
+      return Integer.parseInt(lector.nextLine());
+
+   }
+
+
    public static int random(int min, int max) {
       Random r = new Random();
       return r.nextInt(max - min + 1) + min;
   }
+
+
+
 }
