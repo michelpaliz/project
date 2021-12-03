@@ -73,11 +73,7 @@ public class Ejercicio16 {
                         porrasPlayer++;                          
                      }
                      
-                     System.out.println("\n**********************");
-                     System.out.println("* " + porrasPlayer + " PLAYER  -  CPU " +porrasCPU + " *");
-                     System.out.println("**********************");
-                     System.out.print("\nPulsa intro para continuar...");
-                     lector.nextLine();
+                     recuentoPorras(porrasPlayer, porrasCPU);
                   }
                } else if (puntosPlayer == 11) {                  
                   //Al obtener 11 el jugador suma automáticamente 2 porras
@@ -87,11 +83,7 @@ public class Ejercicio16 {
                   doblePorra();
                   System.out.println("\n¡Bonificación! Doble porra");
                   
-                  System.out.println("\n**********************");
-                  System.out.println("* " + porrasPlayer + " PLAYER  -  CPU " +porrasCPU + " *");
-                  System.out.println("**********************");
-                  System.out.print("\nPulsa intro para continuar...");
-                  lector.nextLine();
+                  recuentoPorras(porrasPlayer, porrasCPU);
                } else {
                   //El jugador se ha pasado
                   System.out.println("Ohh!! Te has pasado");
@@ -99,11 +91,7 @@ public class Ejercicio16 {
                   porrasCPU += 1;
                   puntosCPU = 0;
                   puntosPlayer = 0;
-                  System.out.println("\n**********************");
-                  System.out.println("* " + porrasPlayer + " PLAYER  -  CPU " +porrasCPU + " *");
-                  System.out.println("**********************");
-                  System.out.print("\nPulsa intro para continuar...");
-                  lector.nextLine();
+                  recuentoPorras(porrasPlayer, porrasCPU);
                }
                
             } while(porrasPlayer < 5 && porrasCPU < 5);
@@ -129,6 +117,14 @@ public class Ejercicio16 {
 
    }
 
+   public static void recuentoPorras(int porrasPlayer, int porrasCPU) {
+      System.out.println("\n**********************");
+      System.out.println("* " + porrasPlayer + " PLAYER  -  CPU " +porrasCPU + " *");
+      System.out.println("**********************");
+      System.out.print("\nPulsa intro para continuar...");
+      lector.nextLine();
+   }
+
    public static void doblePorra(){
       System.out.println("\n$$$$$$$$$$$$$$$$");
       System.out.println("$$$$ ¡ONCE! $$$$");
@@ -139,7 +135,5 @@ public class Ejercicio16 {
       Random r = new Random();
       return r.nextInt(max - min + 1) + min;
   }
-
-
 
 }
