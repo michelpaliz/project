@@ -1,9 +1,9 @@
 import java.util.Scanner;
 import java.util.Random;
 public class Ejercicio16 {
+   public static Scanner lector = new Scanner(System.in);
    public static void main(String[] args) throws InterruptedException {
-      final int DELAY = 500;
-      Scanner lector = new Scanner(System.in);     
+      final int DELAY = 500;     
       boolean plantado = false;
       int tiradaPlayer;
       int puntosPlayer = 0;
