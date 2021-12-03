@@ -3,7 +3,6 @@ import java.util.Random;
 public class Ejercicio16 {
    public static void main(String[] args) throws InterruptedException {
       final int DELAY = 500;
-      Random r = new Random();
       Scanner lector = new Scanner(System.in);     
       boolean plantado = false;
       int tiradaPlayer;
@@ -14,6 +13,8 @@ public class Ejercicio16 {
       int porrasCPU = 0;
       int opcion;
       char plantarse;
+      final int MIN = 1;
+      final int MAX = 6;
 
       do {
          System.out.println("***************************");
@@ -31,7 +32,7 @@ public class Ejercicio16 {
             do {      
                System.out.println("Jugador lanza el dado al aire ...");
                Thread.sleep(DELAY);
-               tiradaPlayer = r.nextInt(6 - 1 + 1) + 1;
+               tiradaPlayer = random(MIN, MAX);
                System.out.println("\n*****");               
                System.out.println("* " + tiradaPlayer + " *");               
                System.out.println("*****");               
@@ -47,7 +48,7 @@ public class Ejercicio16 {
                      while(puntosCPU < puntosPlayer) {
                         System.out.println("CPU lanza el dado al aire ...");
                         Thread.sleep(DELAY);                        
-                        tiradaCPU = r.nextInt(6 - 1 + 1) + 1;
+                        tiradaCPU = random(MIN, MAX);
                         System.out.println("\n?????");               
                         System.out.println("? " + tiradaCPU + " ?");               
                         System.out.println("?????\n");                        
