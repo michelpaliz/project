@@ -56,9 +56,7 @@ public class Ejercicio16 {
                         puntosPlayer = 0;
                      } else if(puntosCPU > puntosPlayer) { // Gana CPU
                         if(puntosCPU == 11) {
-                           System.out.println("\n$$$$$$$$$$$$$$$$");
-                           System.out.println("$$$$ ¡ONCE! $$$$");
-                           System.out.println("$$$$$$$$$$$$$$$$");
+                           doblePorra();
                            System.out.println("\nDoble porra para CPU\n");
                            porrasCPU += 2;
                         } else {
@@ -86,9 +84,7 @@ public class Ejercicio16 {
                   porrasPlayer += 2;
                   puntosCPU = 0;
                   puntosPlayer = 0;
-                  System.out.println("\n$$$$$$$$$$$$$$$$");
-                  System.out.println("$$$$ ¡ONCE! $$$$");
-                  System.out.println("$$$$$$$$$$$$$$$$");
+                  doblePorra();
                   System.out.println("\n¡Bonificación! Doble porra");
                   
                   System.out.println("\n**********************");
@@ -133,6 +129,11 @@ public class Ejercicio16 {
 
    }
 
+   public static void doblePorra(){
+      System.out.println("\n$$$$$$$$$$$$$$$$");
+      System.out.println("$$$$ ¡ONCE! $$$$");
+      System.out.println("$$$$$$$$$$$$$$$$");
+   }
 
    public static int random(int min, int max) {
       Random r = new Random();
